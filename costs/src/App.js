@@ -1,37 +1,43 @@
-import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
-import Home from './components/pages/Home';
-import Contact from './components/pages/Contact';
-import Company from './components/pages/Company';
-import NewProject from './components/pages/NewProject';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Footer from './components/layout/Footer'
+import Navbar from './components/layout/Navbar'
+import Container from './components/layout/Container'
+import Home from './components/pages/Home'
+import Projects from './components/pages/Projects'
+import NewProject from './components/pages/NewProject'
+import Company from './components/pages/Company'
+import Contact from './components/pages/Contact'
+import Project from './components/pages/Project'
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <div>
-         <link to="/">Home</link>
-         <link to="/contact">Company</link>
-         <link to="/company">Contact</link>
-         <link to="/newproject">New Project</link>
-        </div>
-        <Switch>
+    <Router>
+      <Navbar />
+      <Switch>
+        <Container customClass="min-height">
           <Route exact path="/">
-            <Home/>
+            <Home />
           </Route>
-          <Route exact path="/company">
-            <Company/>
+          <Route path="/projects">
+            <Projects />
           </Route>
-          <Route exact path="/contact">
-            <Contact/>
+          <Route path="/company">
+            <Company />
           </Route>
-          <Route exact path="/newproject">
-            <NewProject/>
+          <Route path="/contact">
+            <Contact />
           </Route>
-        </Switch>
-        <p>Footer</p>
-      </Router>
-    </div>
-  );
+          <Route path="/newproject">
+            <NewProject />
+          </Route>
+          <Route path="/project/:id">
+            <Project />
+          </Route>
+        </Container>
+      </Switch>
+      <Footer />
+    </Router>
+  )
 }
 
-export default App;
+export default App
