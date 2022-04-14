@@ -1,3 +1,5 @@
+import React from 'react';
+
 import styles from '../project/ProjectCard.module.css'
 
 import { BsFillTrashFill } from 'react-icons/bs'

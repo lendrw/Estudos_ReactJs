@@ -8,6 +8,8 @@ import NewProject from './components/pages/NewProject'
 import Company from './components/pages/Company'
 import Contact from './components/pages/Contact'
 import Project from './components/pages/Project'
+import React from 'react';
+
 
 function App() {
   return (

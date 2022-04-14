@@ -1,4 +1,5 @@
-import { parse, v4 as uuidv4 } from 'uuid'
+import React from 'react';
+import { v4 as uuidv4 } from 'uuid'
 
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
@@ -135,7 +136,7 @@ function Project() {
   }
 
   return (
-    <>
+    <div>
       {project.name ? (
         <div className={styles.project_details}>
           <Container customClass="column">
@@ -153,9 +154,9 @@ function Project() {
                   <p>
                     <span>Total do orçamento:</span> R${project.budget}
                   </p>
-                  <p>
+                  <div>
                     <span>Total utilizado:</span> R${project.cost}
-                  </p>
+                  </div>
                 </div>
               ) : (
                 <div className={styles.form}>
@@ -202,7 +203,7 @@ function Project() {
       ) : (
         <Loading />
       )}
-    </>
+    </div>
   )
 }
 

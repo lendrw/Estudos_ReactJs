@@ -1,3 +1,5 @@
+import React from 'react';
+
 import loading from "../../img/loading.svg";
 
 import styles from "./Loading.module.css";

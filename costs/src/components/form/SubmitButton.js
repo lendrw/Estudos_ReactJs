@@ -1,4 +1,5 @@
 import styles from './SubmitButton.module.css'
+import React from 'react';
 
 function SubmitButton({ text }) {
   return (
